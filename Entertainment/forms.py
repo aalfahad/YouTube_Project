@@ -4,11 +4,9 @@ from .models import Channel,Video
 class ChannelForm(forms.ModelForm):
 	class Meta:
 		model = Channel
-		fields = '__all__'
-		exclude = ['subscribers']
+		exclude = ['creator']
 
 class VideoForm(forms.ModelForm):
 	class Meta:
 		model = Video
-		fields = '__all__'
 		exclude = ['channel']
